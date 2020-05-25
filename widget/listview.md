@@ -33,7 +33,21 @@ ListView.builder(
 
 
 
-> ListView.separated、 ListView.custom待完善
+#### ListView.separated
+
+`ListView.separated`方法与`ListView.builder`类似，可以直接通过设置分隔线，更加方便。
+
+```dart
+ListView.separated(
+	itemCount: 10,
+	itemBuilder: (context, index){
+		return ListTile(title: Text("姓名"));
+	},
+    separatorBuilder: (context, index) => Divider(),  // 分割线
+)
+```
 
 
+
+> ListView.custom待完善
 
