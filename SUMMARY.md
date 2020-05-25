@@ -11,6 +11,6 @@
   
 
 * **APP开发**
-  * 个人中心
-    * [收藏夹](member/favorite.md)
+
+  * [收藏夹](member/favorite.md)
 
