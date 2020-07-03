@@ -16,6 +16,7 @@
 
   * [商品收藏界面](member/favorite.md)
 
+# Summary
 * **小程序组件**
   * [组件封装及通信](small/components/components.md)
 
