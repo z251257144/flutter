@@ -1,0 +1,539 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Future及FutureBuilder · 知识小集</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhoumin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="future.html" />
+    
+    
+    <link rel="prev" href="../widget/listview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/z251257144" target="_blank" class="custom-link">GitHub主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Widget控件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../widget/listview.html">
+            
+                <a href="../widget/listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="future.html">
+            
+                <a href="future.html">
+            
+                    
+                    Future及FutureBuilder
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="future.html">
+            
+                <a href="future.html">
+            
+                    
+                    Future及FutureBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="emptyView.html">
+            
+                <a href="emptyView.html">
+            
+                    
+                    异常界面 - 无数据、错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    APP开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../member/favorite.html">
+            
+                <a href="../member/favorite.html">
+            
+                    
+                    商品收藏界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    小程序组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../small/components/components.html">
+            
+                <a href="../small/components/components.html">
+            
+                    
+                    组件封装及通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Future及FutureBuilder</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="future&#x53CA;futurebuilder">Future&#x53CA;FutureBuilder</h1>
+<p>Dart&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x7EBF;&#x7A0B;&#x3002;&#x5982;&#x679C;Dart&#x4EE3;&#x7801;&#x963B;&#x585E;&#x4E86;&#xFF0C;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x5361;&#x6B7B;&#x3002;&#x6BD4;&#x5982;&#xFF1A;&#x957F;&#x65F6;&#x95F4;&#x7684;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x8FD9;&#x4E00;&#x73B0;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x7A0B;&#x5E8F;&#x5728;&#x7B49;&#x5F85;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x53BB;&#x5B8C;&#x6210;&#x5176;&#x4ED6;&#x5DE5;&#x4F5C;&#x3002;Dart&#x4F7F;&#x7528;<code>Future</code>&#x5BF9;&#x8C61;&#xFF08;<code>futures</code>&#xFF09;&#x6765;&#x8868;&#x793A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x8981;&#x60F3;&#x4F7F;&#x7528;<code>futures</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>async</code>&#x548C;<code>await</code>&#xFF0C;&#x6216;&#x8005;&#x5176;&#x4ED6;<code>Future API</code>&#x3002;</p>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;future&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;Future&#xFF1F;</h4>
+<p> future&#x662F;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x751F;&#x6210;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E0D;&#x662F;&#x53EF;&#x7528;&#x503C;&#xFF0C;&#x90A3;&#x4E48;future&#x7684;&#x7C7B;&#x578B;&#x662F;<code>Future</code>&#x3002;&#x5F53;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;future&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4E24;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ol>
+<li>&#x51FD;&#x6570;&#x5C06;&#x8981;&#x5B8C;&#x6210;&#x7684;&#x5DE5;&#x4F5C;&#x8FDB;&#x884C;&#x6392;&#x961F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x672A;&#x5B8C;&#x6210;&#x7684;Future&#x5BF9;&#x8C61;</li>
+<li>&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;Future&#x5BF9;&#x8C61;&#x5C06;&#x4EE5;&#x4E00;&#x4E2A;&#x503C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x6765;&#x5B8C;&#x6210;</li>
+</ol>
+<p>&#x5F53;&#x4F60;&#x9700;&#x8981;&#x5B8C;&#x6210;Future&#x7684;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x60A8;&#x6709;&#x4E24;&#x4E2A;&#x9009;&#x62E9;&#xFF1A;</p>
+<ul>
+<li><p>&#x4F7F;&#x7528;async&#x548C;await</p>
+</li>
+<li><p>&#x4F7F;&#x7528;Future&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF08;then&#x548C;catchError&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF09;</p>
+</li>
+</ul>
+<p><code>async</code>&#x548C;<code>await</code>&#x5173;&#x952E;&#x5B57;&#x662F;<code>Dart</code>&#x8BED;&#x8A00;&#x5F02;&#x6B65;&#x652F;&#x6301;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5B83;&#x4EEC;&#x5141;&#x8BB8;&#x4F60;&#x5C06; <strong>&#x5F02;&#x6B65;&#x4EE3;&#x7801;</strong> &#x8F6C;&#x6362;&#x4E3A; <strong>&#x540C;&#x6B65;&#x4EE3;&#x7801;</strong> &#x3002;async&#x51FD;&#x6570;&#x7684;&#x4E3B;&#x4F53;&#x524D;&#x9762;&#x6709;async&#x5173;&#x952E;&#x5B57;&#x3002;await&#x5173;&#x952E;&#x5B57;&#x53EA;&#x5728;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x4E2D;&#x751F;&#x6548;&#x3002;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dart">  <span class="hljs-comment">/*&#x7528;&#x6237;&#x767B;&#x5F55;&#x8BF7;&#x6C42;*/</span>
+  Future fetchLogin(phone, password) <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">var</span> param = <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-keyword">dynamic</span>&gt;();
+    param[<span class="hljs-string">&quot;deviceId&quot;</span>] = <span class="hljs-keyword">await</span> DeviceUtil.deviceID();
+    param[<span class="hljs-string">&quot;deviceName&quot;</span>] = <span class="hljs-keyword">await</span> DeviceUtil.deviceName();
+    param[<span class="hljs-string">&quot;mobile&quot;</span>] = phone;
+    param[<span class="hljs-string">&quot;pwd&quot;</span>] = password;
+    debugPrint(param.toString());
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.requestPostData(<span class="hljs-string">&quot;user/m/login&quot;</span>, param: param);
+  }
+
+
+  <span class="hljs-comment">/*&#x8C03;&#x7528;&#x7528;&#x6237;&#x767B;&#x5F55;&#x8BF7;&#x6C42;*/</span>
+  <span class="hljs-keyword">var</span> result = <span class="hljs-keyword">await</span> server.fetchLogin(phone, password);
+  <span class="hljs-built_in">print</span>(result.toString());
+</code></pre>
+<h4 id="future&#x94FE;&#x5F0F;&#x8C03;&#x7528;">Future&#x94FE;&#x5F0F;&#x8C03;&#x7528;</h4>
+<ul>
+<li>&#x4F7F;&#x7528;future.then&#x83B7;&#x53D6;future&#x503C;</li>
+<li>&#x4F7F;&#x7528;cat&#x6355;&#x83B7;&#x5F02;&#x5E38;</li>
+<li>&#x4F7F;&#x7528;whenComplete&#x83B7;&#x53D6;&#x7ED3;&#x675F;&#x56DE;&#x8C03;</li>
+</ul>
+<pre><code class="lang-dart">main() {
+  testFuture().then((value){
+    <span class="hljs-built_in">print</span>(value);
+  },onError: (e) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;onError: \$e&quot;</span>);
+  }).catchError((e){
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;catchError: \$e&quot;</span>);
+  }).whenComplete(() {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Done!!!&quot;</span>)
+  });
+}
+
+Future&lt;<span class="hljs-built_in">String</span>&gt; testFuture() {
+   <span class="hljs-keyword">return</span> Future.value(<span class="hljs-string">&quot;Hello&quot;</span>);
+<span class="hljs-comment">//  return Future.error(&quot;yxjie &#x521B;&#x9020;&#x4E2A;error&quot;);//onError&#x4F1A;&#x6253;&#x5370;</span>
+<span class="hljs-comment">//  throw &quot;an Error&quot;;</span>
+}
+</code></pre>
+<h4 id="future-&#x7684;&#x5E38;&#x7528;&#x51FD;&#x6570;">Future &#x7684;&#x5E38;&#x7528;&#x51FD;&#x6570;</h4>
+<ul>
+<li><strong>Future.then()</strong> &#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4F1A;&#x8FDB;&#x5165;&#x8FD9;&#x91CC;&#xFF0C;&#x80FD;&#x591F;&#x83B7;&#x5F97;&#x8FD4;&#x56DE;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x3002;</li>
+<li><strong>Future.catchError()</strong> &#x6709;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x3002;</li>
+<li><strong>Future.whenComplete()</strong> &#x5F53;&#x4EFB;&#x52A1;&#x505C;&#x6B62;&#x65F6;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x6267;&#x884C;&#x8FD9;&#x91CC;&#x3002;</li>
+<li><strong>Future.wait() </strong>&#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x591A;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x518D;&#x8C03;&#x7528; then()&#x3002;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165; catchError()&#x3002;</li>
+<li><strong>Future.delayed()</strong> &#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5EF6;&#x65F6;&#x4EFB;&#x52A1;&#x3002;</li>
+<li><strong>Future.sync</strong>&#x540C;&#x6B65;&#x6267;&#x884C;</li>
+<li><strong>Future.microtask</strong> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5728;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x91CC;&#x8FD0;&#x884C;&#x7684;Future&#x3002;dart&#x4E0B;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;<code>event queue</code>&#x548C;<code>microtask queue</code>&#xFF0C;<code>microtask queue</code>&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF0C;&#x800C;future&#x7684;&#x4EFB;&#x52A1;&#x9ED8;&#x8BA4;&#x662F;&#x5C5E;&#x4E8E;<code>event queue</code>&#x3002;Future.microtask&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x5C5E;&#x4E8E;<code>microtask queue</code>&#x7684;future&#x3002;</li>
+</ul>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;futurebuilder&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;<a href="https://flutter-academy.com/async-in-flutter-futurebuilder/" target="_blank">FutureBuilder</a>&#xFF1F;</h3>
+<p><code>FutureBuilder</code>&#x662F;&#x4E00;&#x4E2A;&#x5C06;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x548C;&#x5F02;&#x6B65;UI&#x66F4;&#x65B0;&#x7ED3;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x7C7B;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x8BFB;&#x53D6;&#x7B49;&#x7684;&#x7ED3;&#x679C;&#x66F4;&#x65B0;&#x7684;&#x9875;&#x9762;&#x4E0A;&#x3002;</p>
+<h5 id="futurebuilder&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;">FutureBuilder&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-dart">FutureBuilder({Key key, Future&lt;T&gt; future, T initialData, <span class="hljs-meta">@required</span> AsyncWidgetBuilder&lt;T&gt; builder })
+</code></pre>
+<ul>
+<li><code>future</code>&#xFF1A; Future&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x6B64;&#x6784;&#x5EFA;&#x5668;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x7684;&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#xFF1B;</li>
+<li><code>initialData</code>&#xFF1A; &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7684;Future&#x5B8C;&#x6210;&#x524D;&#x7684;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#xFF1B;</li>
+<li><code>builder</code>&#xFF1A; AsyncWidgetBuilder&#x7C7B;&#x578B;&#x7684;&#x56DE;&#x5230;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x5F02;&#x6B65;&#x4EA4;&#x4E92;&#x6784;&#x5EFA;widget&#x7684;&#x51FD;&#x6570;&#xFF1B;</li>
+</ul>
+<p><code>builder</code>&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>BuildContext context</code>&#x4E0E; <code>AsyncSnapshot snapshot</code>&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;widget&#x3002;</p>
+<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">///  * [FutureBuilder], which delegates to </span>an<span class="markdown"> [AsyncWidgetBuilder] to build</span></span>
+<span class="hljs-comment"><span class="markdown">///    itself based on </span>a<span class="markdown"> snapshot from interacting with </span>a<span class="markdown"> [Future].</span></span>
+<span class="hljs-keyword">typedef</span> AsyncWidgetBuilder&lt;T&gt; = Widget <span class="hljs-built_in">Function</span>(BuildContext context, AsyncSnapshot&lt;T&gt; snapshot);
+</code></pre>
+<p><code>AsyncSnapshot</code>&#x5305;&#x542B;&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><code>connectionState</code> - &#x679A;&#x4E3E;ConnectionState&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x4E0E;&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#xFF0C;ConnectionState&#x6709;&#x56DB;&#x4E2A;&#x503C;&#xFF1A;none&#xFF0C;waiting&#xFF0C;active&#x548C;done;</li>
+<li><code>data</code> - &#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x63A5;&#x6536;&#x7684;&#x6700;&#x65B0;&#x6570;&#x636E;&#xFF1B;</li>
+<li><code>error</code> - &#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x63A5;&#x6536;&#x7684;&#x6700;&#x65B0;&#x9519;&#x8BEF;&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li><code>hasData</code>&#x548C;<code>hasError</code>&#x5C5E;&#x6027;&#xFF0C;&#x68C0;&#x67E5;&#x5B83;&#x662F;&#x5426;&#x5305;&#x542B;&#x6570;&#x636E;&#x6216;&#x9519;&#x8BEF;&#x3002;</li>
+</ul>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4F7F;&#x7528;<code>FutureBuilder</code>&#x7684;&#x57FA;&#x672C;&#x6A21;&#x5F0F;&#x3002;&#x5728;&#x521B;&#x5EFA;&#x65B0;&#x7684;FutureBuilder&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;Future&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x8981;&#x5904;&#x7406;&#x7684;&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x4F20;&#x9012;&#x3002; &#x5728;&#x6784;&#x5EFA;&#x5668;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x68C0;&#x67E5;connectionState&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;AsyncSnapshot&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6216;&#x9519;&#x8BEF;&#x8FD4;&#x56DE;&#x4E0D;&#x540C;&#x7684;&#x7A97;&#x53E3;&#x5C0F;&#x90E8;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-dart">    <span class="hljs-comment">//&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</span>
+    <span class="hljs-keyword">return</span> FutureBuilder(
+      future: future,
+      builder: (BuildContext context, AsyncSnapshot snapshot){
+        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6570;&#x636E;</span>
+        <span class="hljs-keyword">if</span> (snapshot.hasData) {
+          <span class="hljs-keyword">return</span> goodsDetailList();
+        }
+
+        <span class="hljs-comment">//&#x62A5;&#x9519;</span>
+        <span class="hljs-keyword">if</span> (snapshot.hasError) <span class="hljs-keyword">return</span> errorWidget(snapshot.error);
+
+        <span class="hljs-comment">//&#x7B49;&#x5F85;&#x4E2D;  </span>
+        <span class="hljs-keyword">return</span> Center(child: CircularProgressIndicator());
+    });
+</code></pre>
+<p>&#x4F7F;&#x7528;FutureBuilder&#x6BCF;&#x6B21;&#x90FD;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7B49;&#x5F85;&#x754C;&#x9762;&#x3001;&#x9519;&#x8BEF;&#x754C;&#x9762;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x5C01;&#x88C5;&#x4E86;<strong>ZMFuture.builder</strong></p>
+<pre><code class="lang-dart"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;package:fire_shop/widgets/empty_view.dart&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;package:flutter/material.dart&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ZMFuture</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+  <span class="hljs-keyword">static</span> FutureBuilder builder({
+    <span class="hljs-meta">@required</span> Future future,
+    <span class="hljs-meta">@required</span> Widget view,
+    Widget errorView,
+    Widget loadingView
+  }) {
+
+    <span class="hljs-keyword">return</span> FutureBuilder(
+      future: future,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        <span class="hljs-keyword">if</span> (snapshot.hasData) {
+          <span class="hljs-keyword">return</span> view;
+        }
+
+        <span class="hljs-comment">// &#x9519;&#x8BEF;&#x754C;&#x9762;</span>
+        <span class="hljs-keyword">if</span> (snapshot.hasError) {
+          <span class="hljs-keyword">if</span> (errorView != <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> errorView;
+          }
+
+          <span class="hljs-keyword">return</span> ZMFuture.errorView(snapshot.error);
+        };
+
+        <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x52A0;&#x8F7D;&#x56FE;</span>
+        <span class="hljs-keyword">if</span> (loadingView != <span class="hljs-keyword">null</span>) {
+          <span class="hljs-keyword">return</span> loadingView;
+        }
+
+        <span class="hljs-keyword">return</span> Center(child: CircularProgressIndicator());
+      }
+    );
+  }
+
+  <span class="hljs-comment">/*
+  * &#x9519;&#x8BEF;&#x754C;&#x9762;
+  * */</span>
+  <span class="hljs-keyword">static</span> Widget errorView(error) {
+    <span class="hljs-keyword">return</span> EmptyView(
+    );
+  }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-dart">ZMFuture.builder(
+  future: future,
+  view: view
+)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../widget/listview.html" class="navigation navigation-prev " aria-label="Previous page: ListView">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="future.html" class="navigation navigation-next " aria-label="Next page: Future及FutureBuilder">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Future及FutureBuilder","level":"1.3","depth":1,"next":{"title":"Future及FutureBuilder","level":"1.3.1","depth":2,"path":"dart/future.md","ref":"dart/future.md","articles":[]},"previous":{"title":"ListView","level":"1.2.1","depth":2,"path":"widget/listview.md","ref":"widget/listview.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhoumin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"知识小集","language":"zh-hans","links":{"sidebar":{"GitHub主页":"https://github.com/z251257144"},"gitbook":true},"gitbook":"*","description":"知识小集收录我的学习经历和工作经历..."},"file":{"path":"dart/future.md","mtime":"2020-07-03T08:09:55.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-03T08:10:38.624Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

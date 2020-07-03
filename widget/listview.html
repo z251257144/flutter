@@ -1,0 +1,407 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ListView · 知识小集</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhoumin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../dart/future.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/z251257144" target="_blank" class="custom-link">GitHub主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Widget控件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="listview.html">
+            
+                <a href="listview.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dart/future.html">
+            
+                <a href="../dart/future.html">
+            
+                    
+                    Future及FutureBuilder
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dart/future.html">
+            
+                <a href="../dart/future.html">
+            
+                    
+                    Future及FutureBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dart/emptyView.html">
+            
+                <a href="../dart/emptyView.html">
+            
+                    
+                    异常界面 - 无数据、错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    APP开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../member/favorite.html">
+            
+                <a href="../member/favorite.html">
+            
+                    
+                    商品收藏界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    小程序组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../small/components/components.html">
+            
+                <a href="../small/components/components.html">
+            
+                    
+                    组件封装及通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ListView</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="listview">ListView</h1>
+<p>ListView &#x662F;Flutter&#x6700;&#x5E38;&#x7528;&#x7684;&#x6ED1;&#x52A8;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x7EBF;&#x6027;&#x5C55;&#x793A;widgets &#x5217;&#x8868;&#x3002;&#x5217;&#x8868;&#x6709;&#x56DB;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#x3001;ListView.builder&#x3001;ListView.separated&#x3001; ListView.custom&#x3002;</p>
+<h4 id="&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;">&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;</h4>
+<pre><code class="lang-dart">ListView(
+    children: &lt;Widget&gt;[
+          ListTile(title: Text(<span class="hljs-string">&quot;&#x59D3;&#x540D;&quot;</span>)),
+          ListTile(title: Text(<span class="hljs-string">&quot;&#x7535;&#x8BDD;&quot;</span>)),
+          ListTile(title: Text(<span class="hljs-string">&quot;&#x5E74;&#x9F84;&quot;</span>)),
+          ListTile(title: Text(<span class="hljs-string">&quot;&#x624B;&#x673A;&#x53F7;&quot;</span>)),
+          ListTile(title: Text(<span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>))
+    ],
+)
+</code></pre>
+<h4 id="listviewbuilder">ListView.builder</h4>
+<pre><code class="lang-dart">ListView.builder(
+    itemCount: <span class="hljs-number">10</span>,
+    itemBuilder: (context, index){
+        <span class="hljs-keyword">return</span> ListTile(title: Text(<span class="hljs-string">&quot;&#x59D3;&#x540D;&quot;</span>));
+    }
+)
+</code></pre>
+<h4 id="listviewseparated">ListView.separated</h4>
+<p><code>ListView.separated</code>&#x65B9;&#x6CD5;&#x4E0E;<code>ListView.builder</code>&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x5206;&#x9694;&#x7EBF;&#xFF0C;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x3002;</p>
+<pre><code class="lang-dart">ListView.separated(
+    itemCount: <span class="hljs-number">10</span>,
+    itemBuilder: (context, index){
+        <span class="hljs-keyword">return</span> ListTile(title: Text(<span class="hljs-string">&quot;&#x59D3;&#x540D;&quot;</span>));
+    },
+    separatorBuilder: (context, index) =&gt; Divider(),  <span class="hljs-comment">// &#x5206;&#x5272;&#x7EBF;</span>
+)
+</code></pre>
+<blockquote>
+<p>ListView.custom&#x5F85;&#x5B8C;&#x5584;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../dart/future.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Future及FutureBuilder">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ListView","level":"1.2.1","depth":2,"next":{"title":"Future及FutureBuilder","level":"1.3","depth":1,"path":"dart/future.md","ref":"dart/future.md","articles":[{"title":"Future及FutureBuilder","level":"1.3.1","depth":2,"path":"dart/future.md","ref":"dart/future.md","articles":[]},{"title":"异常界面 - 无数据、错误","level":"1.3.2","depth":2,"path":"dart/emptyView.md","ref":"dart/emptyView.md","articles":[]}]},"previous":{"title":"Widget控件","level":"1.2","depth":1,"ref":"","articles":[{"title":"ListView","level":"1.2.1","depth":2,"path":"widget/listview.md","ref":"widget/listview.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhoumin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"知识小集","language":"zh-hans","links":{"sidebar":{"GitHub主页":"https://github.com/z251257144"},"gitbook":true},"gitbook":"*","description":"知识小集收录我的学习经历和工作经历..."},"file":{"path":"widget/listview.md","mtime":"2020-07-03T08:09:55.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-03T08:10:38.624Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
