@@ -5,7 +5,7 @@
 
 但看界面非常容易，使用微信小程序picker控件就行，但是和业务结合以后发现并不可行，**picker控件点击后直接显示列表，无法插入数据请求等相关逻辑**。这里决定自行封装列表，然后在微信小程序JS文件写入相关业务逻辑，控制显示、消失、选中等相关逻辑。
 
-###组件封装
+### 组件封装
 [组件官方介绍](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html)，这里不一一介绍了，需要了解的自行阅读，主要介绍我封装的[region-picker](https://github.com/z251257144/FireShop_wx/tree/master/components/region-picker)。
 
 WXML文件
@@ -182,11 +182,14 @@ JSON文件
 }
 ```
 该组件对外提供了两个方法：
+
 1、显示组件（show(array, index)），用于传入列表数据和索引。
+
 2、确认列表选中索引（confirmSelect），用于数据回调。
+
 传入数据有两种方式：第一种使用properties，在组件创建时传入，第二种是获取组件（selectComponent），再调用传入方法。
 
-###组件使用
+### 组件使用
 在需要使用的界面WXML创建组件
 ```XML
 <region-picker id="region-picker-city" bind:confirmSelect="confirmSelectCity">
@@ -211,9 +214,11 @@ JSON文件
 
 至此该控件的封装及使用已经写好了，以上控件使用是简化版的，实际业务是在数据请求成功以后再调用`changeCity`方法，并且方法内的res是实际数据，想查看具体代码的请移至我的[github工程FireShop_wx地址](https://github.com/z251257144/FireShop_wx)。
 
-###总结
+### 总结
 1、封装组件便于我们自行控制代码逻辑，便于业务扩展，同时减少重复代码。
+
 2、学习组件封装方法，具体阅读官方文档。
+
 3、了解组件调用和数据回调方式。
 
 
